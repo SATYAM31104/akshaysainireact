@@ -1,23 +1,16 @@
-let newbtn=document.querySelector("#btn1");
+let btn=document.querySelector("#mode");
+let currmode="light";
 
-// newbtn.onclick=()=>{
-// console.log("the button was pressed");
-// }
-newbtn.addEventListener("click", ()=>{
-    console.log("the button was pressed handler 1");
+btn.addEventListener("click", ()=>{
+    
+    if(currmode==="light"){
+       currmode="dark";
+       document.querySelector("body").style.backgroundColor="black";
+    }
+    else{
+        currmode="light";
+        document.querySelector("body").style.backgroundColor="white";
+    }
+
+    console.log(currmode);
 })
-
-newbtn.addEventListener("click", ()=>{
-    console.log("the button was pressed handler 2");
-})
-
-const handler3 = ()=>{
-    console.log("the button was pressed handler 3");
-};
-newbtn.addEventListener("click",handler3);
-
-newbtn.addEventListener("click", ()=>{
-    console.log("the button was pressed handler 4");
-})
-
-newbtn.removeEventListener("click",handler3);
