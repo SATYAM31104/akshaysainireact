@@ -1,167 +1,98 @@
-// // // function eventfunction(){
-// // //     console.log("i have pressed the button");
-// // // }
-// // // document.addEventListener('click',eventfunction);
-// // // document.removeEventListener('click',eventfunction);
+// // // let name='5';
+// // // console.log(name);
+// // // let numbers=[1,2,3,4,5];
+// // // numbers.push(60);
+// // // numbers.unshift(8);
+// // // numbers.splice(2,0,'a','v','c');
+// // // let courses=[
+// // //     {no:1,name:'raja',sex:'addict'},
+// // //     {no:2,name:'rani',sex:'slave'}
+// // // ]
+// // // let course=courses.find(course=>course.name=='raja'); //here the predicate function paramater can be any name 
 
-// // // const content= document.querySelector('#wrapper');
+// // // console.log(course);
 
-// // // console.log(content);
+// let array1=[1,2,3,4,5,6,7];
+// let array2=[8,9,10,11,12];
+// // // // let combined=array1.concat(array2);
+// // // // let sliced=combined.slice(2,6); //last waala index exclude ho jaata hai
+// let anothercombination=[...array1,'a','cunt',...array2]; //... are the spread operators
+// console.log(anothercombination);
 
-// // // content.addEventListener('click',function(potty){
-// // //     console.log(potty);
+// // // console.log(sliced);
 
-// // // })
- 
-
-// // let mydiv=document.createElement('div');
-
-// // function parastatus(event){
-// //    console.log('para',event.target.textContent);
+// //iterating an array
+// let array=[10,20,30,40];
+// // for(let value of array){
+// //     console.log(array);
 // // }
-// // mydiv.addEventListener('click',parastatus);
 
-// // for(let i=1;i<100;i++){
-// //     let newelement=document.createElement('p');
-// //     newelement.textContent='This is para'+i;
-// //     mydiv.appendChild(newelement);
-// // }
-// // document.body.appendChild(mydiv);
-// let element=document.querySelector("#wrapper2");
-// element.addEventListener('click',function(event){
-//     if(event.target.nodeName==='SPAN'){
-//     console.log("we have clicked on span tag"+event.target.textContent); 
-// }
-// })
+// array.forEach(number=>console.log(number));
 
-// let t1=performance.now();
-// for(let i=0;i<1000;i++){
-//    let newelement= document.createElement('p');
-//    newelement.textContent= 'i am a paragraph'+i;
+//joining arrays
+// let num=[10,-20,-40,30];
+// let joined=num.join('/');
+// let message="suryansh madharchod bsdka gawar loda";
+// let spl=message.split(' ');
+// console .log(spl[0]);
+// console.log(joined);
+// let rev =num.reverse();
+// console.log(rev);
+// let filtered= num.filter(value=> value<=0);
+// console.log(filtered);
+// let filtered=num.filter(num=> num>=0)
+// let filtered = num.filter(num => num >= 0);
+// console.log(filtered);
 
-
-
-// document.body.appendChild(newelement);
-// }
-// let t2=performance.now();
-// console.log("this took "+(t2-t1)+"ms");
- 
-//code using fragments
-// let fragment=document.createDocumentFragment();
-// for(let i=0;i<1000;i++){
-//        let newelement= document.createElement('p');
-//        newelement.textContent= 'i am a paragraph'+i;
-    
-    
-    
-//     fragment.appendChild(newelement);
-//     }
-//     document.body.appendChild(fragment); //1 reflow and 1 repaint
-document.body.style.backgroundColor="grey"
-let content=document.querySelector("#wrapper2");
-// content.style.backgroundColor="green";
-
-// let merapromise=new Promise(function(resolve,reject){
-//     setTimeout(function(){
-//         console.log("inside the promise")
-//     },5000);
-//     // resolve(2244); 
-//     reject("i am an error");
-
-// });
-// merapromise.then((value)=>{console.log(value)},(error)=>{console.log("bhai aagaya error")});//handling the value aftetr the succesful execution of the code
-// merapromise.catch((error)=>{console.log("bhai aagaya error")}); //handling the error after the rejection or when we get an error in our code
-
-
-// let merapromise1=new Promise(function(resolve,reject){
-//     setTimeout(function(){
-//         console.log("inside the promise1")
-//     },1000);
-//     // resolve(2244); 
-//     // reject("new error");
-// });
-
-// let wada1 = new Promise(function(resolve, reject) {
-//     setTimeout(() => {
-//         console.log("settimeout1 started");
+// let items = num
+//              .filter(num => num > 0)
+//              .map(num => ({ value: num }));
+// console.log(items);
+// function add(a,b){
+//     let total=0;
+//     for(let digits of arguments){
+//         total =total +digits;
         
-//     }, 5000);
-//     resolve(true); 
-// });
-
-// let output=wada1.then((()=>{
-//     let wada2= new Promise(function(resolve,reject){
-//        setTimeout(()=>{
-//         console.log("settimeout 2 sarted")
-//     },10000);
-//     resolve("wada 2 resolved");
-//     })
-//     return wada2;//returning a promise and returns a value which is applied in then function later this scope
-// }))
-// output.then((value)=>console.log(value)); //here output is also a promise only
-
-
-
-// ASYNC-AWAIT
-// async function abcd(){
-//     return "sex";
+//     }
+//     return total;
+// };
+// console.log(add(3,4,4,2,6));
+// function sum(...args){ //yeh array form bana deta hai
+//     console.log(args);
 // }
-// console.log(abcd)
-// async function utility(){
+// sum(1,2,3,4);
+// let obj={
+//  fname:'shashwat', 
+//  lname:'srivastava'
+// }
+// // console.log(obj);
 
+// function fullname(){
+//     return `${obj.fname} ${obj.lname}`;
+// }
+// console.log(fullname()); //this is only readonnly
 
-// let delhimausam= new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
-//         console.log("delhi mai bohot garmi hai");
-//     },10000);
-// });
-// let hydmausam= new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
-//         console.log("hyd mai bohot garmi hai");
-//     },20000);
-// });
-// let DM= delhimausam;
-// let HM=await hydmausam;
-// return [DM,HM];
+//getter setter douct
+// let person={
+//     fname:'shashwat',
+//     lname:'srivastava',
+//     get fullname(){
+//         return `${person.fname} ${person.lname}`;
+//     } ,
+//     set fullname(value){
+//         let parts =value.split('/');
+//         this.fname=parts[0];
+//         this.lname=parts[1];
+
+//     }
 // }
 
-//get or fetch API()
-// async function utility(){
-//     let cont=await fetch('https://jsonplaceholder.typicode.com/posts/1'); //jab tak fetch nahi ho jaata tab tak ruko yahan par next line par nahi jaana hai
-//     let output=await cont.json(); //converting into java script object notation
-//     console.log(output);
-// }
+// console.log(person.fullname);
 
-// async function helper(){
-//     let options = {
-//         method: 'POST',
-//         body: JSON.stringify({
-//             title: 'babbar',
-//             body: 'bhai ki jai',
-//             userId: 1994,
-//             weight:33,
-//         }),
-//         headers: {
-//             'Content-Type': 'application/json; charset=UTF-8',
-//         },
-//     };
-//     let lauda= await fetch('https://jsonplaceholder.typicode.com/posts',options);
-//    let response=lauda.json();
-//    return response;
+//try and catch doubt
 
-// }
-// async function utility(){
-//     let ans=await helper();
-//     console.log(ans);
-
-// }
-// utility();
-
-
-
-//closures
-// jab bhi nested functions  waala case aayega humesha closure use karenege and ispe refrences wala pass by refrences waal refrrence lagega
-// naakki copy waala 
-
-
+let arr=[1,2,3,4];
+let totalsum=arr.reduce((accumulator,currentvalue)=>accumulator+currentvalue,0);//here the 0 is the initaial value of the accumulator
+console.log("printing thee total sum");//when the accumulator is not given the first element of the array is taken as the accumulator and second value is taken as the current value
+console.log(totalsum);
 
